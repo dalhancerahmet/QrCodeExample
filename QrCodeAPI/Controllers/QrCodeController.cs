@@ -15,7 +15,7 @@ namespace QrCodeAPI.Controllers
             string serializedProduct = JsonSerializer.Serialize(product);
             QrCoder qrCode = new();
             byte[] generatedQrCode = qrCode.GenerateQrCode(serializedProduct);
-            return File(generatedQrCode, "image/png");
+            return File(generatedQrCode, "image/png"); 
         }
     }
 }
